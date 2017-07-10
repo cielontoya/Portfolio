@@ -60,8 +60,12 @@ article {
     margin-left: 170px;
     border-left: 1px solid gray;
     padding: 1em;
-    overflow: hidden;
-}
+    overflow: hidden;}
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
 </style>
 </head>
   
@@ -75,9 +79,30 @@ article {
   
 <nav>
   <ul>
-    <img src="Pizza.jpg" alt="Eating Pizza" style="width:325px;height:245px;">
-    <img src="Folklorico.jpg" alt="Folklorico" style="width:325px;height:245px;">
+   <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="Folklorico.jpg" style="width:100%">
+    <img class="mySlides" src="Pizza.jpg" style="width:100%">
+    <img class="mySlides" src="kinder_grad.png" style="width:100%">
+    <img class="mySlides" src="pink.jpg" style="width:100%">
+    <img class="mySlides" src="blue.jpg" style="width:100%">
+    <img class="mySlides" src="white.jpg" style="width:100%">	  
     <img src="straws.gif" alt="straw" style="width:300px;height:215px;">
+  </div>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 4 seconds}
+</script>
   </ul>
 </nav>
 
